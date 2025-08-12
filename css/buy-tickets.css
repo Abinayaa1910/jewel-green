@@ -1,0 +1,318 @@
+/* ---------- Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffffff;
+  color: #222;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background: #14261d;
+  color: #ffffff;
+}
+
+/* ---------- Container ---------- */
+.ticket-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 12px;
+  overflow: visible;
+  background: transparent; /* remove unnecessary white box */
+}
+
+/* ---------- Title ---------- */
+.bundle-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #054d1a;
+  margin-bottom: 2rem;
+}
+
+/* ---------- Layout ---------- */
+.bundle-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.bundle-description {
+  flex: 1 1 55%;
+}
+
+.bundle-form {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ---------- Description Box ---------- */
+.desc-box {
+  background: #e6f6ec;
+  padding: 1.5rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.desc-box h3 {
+  color: #007a3d;
+  margin-bottom: 1rem;
+}
+
+.desc-box strong {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.desc-box ul {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+body.dark-mode .desc-box {
+  background: #22372c;
+  color: #f2f2f2;
+}
+
+body.dark-mode .desc-box h3 {
+  color: #9cd940;
+}
+
+/* ---------- Form Inputs ---------- */
+form label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+input[type="date"],
+select {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+body.dark-mode input[type="date"],
+body.dark-mode select {
+  background: #1c3026;
+  color: #f2f2f2;
+  border: 1px solid #4a7d5a;
+}
+
+/* ---------- Ticket Row ---------- */
+.ticket-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.ticket-row label {
+  flex: 1;
+  font-weight: 600;
+}
+
+.ticket-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 2;
+  justify-content: flex-end;
+}
+
+/* ---------- Price Tag ---------- */
+.price-tag {
+  background: #e6f4ff;
+  color: #045497;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  min-width: 90px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .price-tag {
+  background: #274336;
+  color: #a7f08e;
+}
+
+/* ---------- Counter ---------- */
+.counter {
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.counter button {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background: linear-gradient(to right, #5ac18e, #b0f562);
+  transition: 0.2s ease;
+}
+
+.counter button:hover {
+  opacity: 0.85;
+}
+
+.counter input {
+  width: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 0.3rem 0.2rem;
+  font-size: 1rem;
+  background: #fff;
+  pointer-events: none;
+}
+
+body.dark-mode .counter input {
+  background: #1c3026;
+  color: #fff;
+  border: 1px solid #4a7d5a;
+}
+
+/* ---------- Checkbox ---------- */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  margin: 1rem 0;
+}
+
+/* ---------- Add to Cart Button ---------- */
+.add-btn {
+  background: linear-gradient(to right, #5ac18e, #28b46c);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 1rem;
+}
+
+.add-btn:hover {
+  opacity: 0.9;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .bundle-layout {
+    flex-direction: column;
+  }
+
+  .qty-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .qty-controls {
+    justify-content: flex-start;
+  }
+
+  .add-btn {
+    width: 100%;
+  }
+}
+
+/* ---------- Progress Tracker ---------- */
+.progress-tracker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #ffffff;
+  padding: 14px 0;
+  z-index: 1000;
+  border-bottom: 1px solid #eee;
+}
+
+.sticky-tracker {
+  top: 70px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.circle {
+  width: 32px;
+  height: 32px;
+  background: #ccc;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.circle.filled {
+  background: #3ac36e;
+  color: white;
+}
+
+.line {
+  width: 50px;
+  height: 3px;
+  background: #3ac36e;
+  border-radius: 4px;
+}
+
+.empty-line {
+  background: #ccc;
+}
+/* ---------- Dark Mode: Progress Tracker ---------- */
+body.dark-mode .progress-tracker {
+  background: #1b2c23;
+  border-bottom: 1px solid #2f4a3d;
+}
+
+body.dark-mode .step {
+  color: #cccccc;
+}
+
+body.dark-mode .circle {
+  background: #444;
+  color: #eee;
+}
+
+body.dark-mode .circle.filled {
+  background: #9cd940;
+  color: #000;
+}
+
+body.dark-mode .line {
+  background: #9cd940;
+}
+
+body.dark-mode .empty-line {
+  background: #444;
+}

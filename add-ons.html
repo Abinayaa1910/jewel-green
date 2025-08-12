@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jewel Add-Ons</title>
+  <link rel="stylesheet" href="css/add-ons.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- 🔄 Navbar loaded via JS -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- ✅ Progress Tracker -->
+  <div class="progress-tracker sticky-tracker">
+    <div class="step"><div class="circle">1</div><span>Select tickets</span></div>
+    <div class="line empty-line"></div>
+    <div class="step current"><div class="circle filled">2</div><span>Add-ons</span></div>
+    <div class="line empty-line"></div>
+    <div class="step"><div class="circle">3</div><span>Payment</span></div>
+  </div>
+
+  <!-- 💡 Page Layout -->
+  <div class="container">
+    <!-- 🔽 Scrollable Add-Ons Section -->
+    <div class="addons-section" id="addons-container">
+      <!-- All cards will be rendered by JS -->
+    </div>
+
+    <!-- 🛒 Sticky Cart Section -->
+    <div class="cart-section">
+      <div class="cart-box">
+        <h3>My Cart (<span id="cart-count">0</span>)</h3>
+        <ul id="cart-items"></ul>
+        <label>Promo Code</label>
+        <input type="text" placeholder="Promo Code / Voucher Code" />
+        <button class="apply-btn" disabled>Apply</button>
+        <div class="total-row">
+          <span>Total</span>
+          <span id="cart-total">SGD 0.00</span>
+        </div>
+        <div class="cart-buttons">
+          <button class="back-btn">Back</button>
+          <button class="pay-btn">Proceed To Pay</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🔁 External JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>

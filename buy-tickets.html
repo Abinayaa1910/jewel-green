@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Buy Tickets – Canopy Park Bundle</title>
+  <link rel="stylesheet" href="css/buy-tickets.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- 🔄 Navbar loaded via JS -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- ✅ Progress Tracker -->
+  <div class="progress-tracker sticky-tracker">
+    <div class="step current">
+      <div class="circle filled">1</div>
+      <span>Select tickets</span>
+    </div>
+    <div class="line empty-line"></div>
+    <div class="step">
+      <div class="circle">2</div>
+      <span>Add-ons</span>
+    </div>
+    <div class="line empty-line"></div>
+    <div class="step">
+      <div class="circle">3</div>
+      <span>Payment</span>
+    </div>
+  </div>
+
+  <main class="ticket-container">
+    <h2 class="bundle-title">Mastercard® Canopy Bridge + Canopy Park (Bundle Deal)</h2>
+    <section class="bundle-layout">
+
+      <!-- LEFT: Description -->
+      <div class="bundle-description">
+        <div class="desc-box">
+          <h3>Details & Inclusions</h3>
+          <strong>Package Includes:</strong>
+          <ul>
+            <li><strong>Canopy Park – (Standard)</strong> x1</li>
+            <li><strong>Mastercard® Canopy Bridge – (Standard)</strong> x1</li>
+          </ul>
+          <strong>Description:</strong>
+          <ul>
+            <li>Children aged 3 – 12 years old must be accompanied by an adult.</li>
+            <li>Canopy Park ticket includes Discovery Slides*, Foggy Bowls, Petal Garden and Topiary Walk.</li>
+            <li>*Minimum height requirement of 110cm applies to Discovery Slides, Walking Net and Bouncing Net.</li>
+            <li>Ticket includes complimentary admission into Canopy Park on same day of visit.</li>
+          </ul>
+          <strong>Terms & Conditions:</strong>
+          <ul>
+            <li>Admits one only. Non-exchangeable, non-refundable and not for resale.</li>
+            <li>Operating hours are subject to change.</li>
+            <li>To the fullest extent permitted by law, Changi Airport Group (Singapore) Pte. Ltd. and Jewel Changi Airport Trustee Pte. Ltd. shall not be liable for any:
+              <ul>
+                <li>Direct loss</li>
+                <li>Indirect or consequential loss</li>
+                <li>Damage</li>
+                <li>Cost and expense</li>
+                <li>Loss of profits</li>
+              </ul>
+            </li>
+            <li>Consent to full terms at <a href="https://www.jewel.sg/terms" target="_blank">jewel.sg/terms</a>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div class="bundle-form">
+        <form id="bundle-form">
+          <div class="form-group">
+            <label for="ticket-type">Ticket Type</label>
+            <select id="ticket-type" name="ticket-type" required>
+              <option value="">-- Select Ticket Type --</option>
+              <option value="standard">Standard</option>
+              <option value="local">Singapore Resident</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="visit-date">Visit Date</label>
+            <input type="date" id="visit-date" required />
+          </div>
+
+          <div class="form-group">
+            <label for="visit-time">Visit Time</label>
+            <select id="visit-time" required>
+              <option value="">-- Choose Time --</option>
+              <option>10:00 AM</option>
+              <option>11:00 AM</option>
+              <option>12:00 PM</option>
+              <option>01:00 PM</option>
+              <option>02:00 PM</option>
+              <option>03:00 PM</option>
+              <option>04:00 PM</option>
+              <option>05:00 PM</option>
+              <option>06:00 PM</option>
+            </select>
+          </div>
+
+          <h4>Quantity</h4>
+
+          <!-- Adult Row -->
+          <div class="ticket-row">
+            <label for="adultQty">Adult</label>
+            <div class="ticket-controls">
+              <span id="adult-price" class="price-tag">SGD -</span>
+              <div class="counter">
+                <button type="button" onclick="adjustQtyBuy('adultQty', -1)">–</button>
+                <input type="number" id="adultQty" value="1" readonly />
+                <button type="button" onclick="adjustQtyBuy('adultQty', 1)">+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Child Row -->
+          <div class="ticket-row">
+            <label for="childQty">Child</label>
+            <div class="ticket-controls">
+              <span id="child-price" class="price-tag">SGD -</span>
+              <div class="counter">
+                <button type="button" onclick="adjustQtyBuy('childQty', -1)">–</button>
+                <input type="number" id="childQty" value="0" readonly />
+                <button type="button" onclick="adjustQtyBuy('childQty', 1)">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="height-check" required />
+            <label for="height-check">All guests are at least 110cm tall</label>
+          </div>
+
+          <button type="submit" class="add-btn">Add to Cart</button>
+          <p id="form-error" style="color: red; margin-top: 0.5rem;"></p>
+
+
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

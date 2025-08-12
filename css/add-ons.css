@@ -1,0 +1,342 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5fdf5;
+  margin: 0;
+  color: #222;
+}
+
+body.dark-mode {
+  background-color: #0e1e15;
+  color: #f0f0f0;
+}
+
+.navbar {
+  background-color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .navbar {
+  background-color: #111;
+  box-shadow: 0 2px 5px rgba(255,255,255,0.05);
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 100px);
+  padding: 2rem;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.addons-section {
+  width: 70%;
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+.cart-section {
+  width: 30%;
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+
+body.dark-mode .card {
+  background-color: #182d23;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(255,255,255,0.05);
+}
+
+.select-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  padding: 0.5rem 1.2rem;
+  background: linear-gradient(to right, #a8e063, #56ab2f);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.select-btn:hover {
+  background: linear-gradient(to right,  #56ab2f,#a8e063);
+}
+
+body.dark-mode .select-btn {
+  color: #181a1b;
+}
+
+.add-btn, .confirm-btn, .apply-btn, .pay-btn, .back-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.add-btn, .pay-btn {
+  background: linear-gradient(to right, var(--brand-green), var(--brand-teal));
+}
+
+.add-btn:hover,
+.pay-btn:hover {
+  background: linear-gradient(to right, var(--brand-teal), var(--brand-green));
+  opacity: 0.9;
+}
+
+.confirm-btn {
+  background: linear-gradient(to right, #2ac769, #4cd964);
+}
+
+.confirm-btn:disabled,
+.apply-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.back-btn {
+  background: white;
+  color: #2ac769;
+  border: 2px solid #2ac769;
+}
+
+body.dark-mode .back-btn {
+  background: transparent;
+  color: #a8e063;
+  border: 2px solid #a8e063;
+}
+
+.quantity {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.quantity-input {
+  display: flex;
+  align-items: center;
+  background: #eafff0;
+  border-radius: 5px;
+  padding: 0.4rem;
+  gap: 0.5rem;
+}
+
+body.dark-mode .quantity-input {
+  background: #244032;
+}
+
+.quantity-input button {
+  background: linear-gradient(to right, #4cd964, #2ac769);
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.quantity-input span {
+  width: 20px;
+  text-align: center;
+}
+
+.cart-box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .cart-box {
+  background: #182d23;
+  color: #fff;
+}
+
+.cart-box h3 {
+  background: linear-gradient(to right, var(--brand-green), var(--brand-teal));
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+body.dark-mode .cart-box h3 {
+  background: linear-gradient(to right, var(--brand-green), var(--brand-teal));
+  color: #f9f8f8;
+}
+
+.cart-box input[type="text"] {
+  width: 100%;
+  padding: 0.4rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.cart-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+/* ✅ Tracker Step Styles */
+.progress-tracker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  margin-top: 1rem;
+  background: white;
+}
+
+body.dark-mode .progress-tracker {
+  background: #121b16;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+body.dark-mode .step {
+  color: #ccc;
+}
+
+.circle {
+  width: 32px;
+  height: 32px;
+  background: #ccc;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.circle.filled {
+  background: #3ac36e;
+  color: white;
+}
+
+.line {
+  width: 50px;
+  height: 3px;
+  background: #3ac36e;
+  border-radius: 4px;
+}
+
+.empty-line {
+  background: #ccc;
+}
+
+.description-box {
+  background: #f0fdf4;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid #2ac769;
+  border-radius: 5px;
+}
+
+body.dark-mode .description-box {
+  background: #20382c;
+  border-left: 4px solid #a8e063;
+  color: #eee;
+}
+
+.form-section label {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.form-section select,
+.form-section input[type="date"] {
+  margin-left: 0.5rem;
+  padding: 0.3rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+/* 🌙 Dark Mode Fixes for Form Fields */
+body.dark-mode select,
+body.dark-mode input[type="text"],
+body.dark-mode input[type="date"],
+body.dark-mode .description-box {
+  background-color: #1f2d26;
+  color: #ffffff;
+  border: 1px solid #3a5d49;
+}
+
+body.dark-mode select option {
+  background-color: #1f2d26;
+  color: #ffffff;
+}
+
+body.dark-mode .quantity-input {
+  background-color: #23352b;
+  color: #fff;
+}
+
+body.dark-mode .description-box {
+  background-color: #1e2a23;
+  border-left: 4px solid #9cd940;
+  color: #ddd;
+}
+/* 🎯 Bigger Inputs for Better Visibility */
+.ticket-form select,
+.ticket-form input[type="date"] {
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 160px;
+  margin: 0.3rem 0.6rem;
+}
+
+/* 🌙 Adjust for dark mode too */
+body.dark-mode .ticket-form select,
+body.dark-mode .ticket-form input[type="date"] {
+  background-color: #1f2d26;
+  color: white;
+  border: 1px solid #3a5d49;
+}

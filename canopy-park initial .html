@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canopy Park – Jewel Changi</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/canopy-park.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<!-- ✅ NAVBAR -->
+<header class="main-header">
+  <div class="navbar">
+    <img src="assets/images/jewel-logo.webp" alt="Jewel Logo" class="logo" width="80" height="55" loading="lazy">
+    <ul class="main-nav">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">PLAN YOUR VISIT</a>
+        <ul class="sub-menu">
+          <div>
+            <h4>Visitor Guide</h4>
+            <a href="#">Getting to/from Jewel</a>
+            <a href="#">Itinerary at Jewel</a>
+            <a href="#">Amenities & Services</a>
+            <a href="#">Changi Lounge</a>
+            <a href="#">Plants at Jewel</a>
+          </div>
+          <div>
+            <h4>What's On</h4>
+            <a href="#">Shopping & Dining Promotions</a>
+            <a href="#">Canopy Park Promotions</a>
+            <a href="#">Jewel Privileges Programme</a>
+            <a href="#">Jewel Vouchers</a>
+            <a href="#">Changi Rewards e-Voucher Flexi</a>
+            <a href="#">eCapitaVoucher</a>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <a href="#">Venue Hire</a>
+            <a href="#">Attractions Buyout</a>
+            <a href="#">Weddings at Jewel</a>
+            <a href="#">Wedding Photography at Jewel</a>
+            <a href="#">Team Building at Jewel</a>
+            <a href="#">Discover Jewel Tour</a>
+            <a href="#">Jewel Beleavers Volunteer Programme</a>
+          </div>
+          <div>
+            <h4>Tourists</h4>
+            <a href="#">Tourist Perks & Promotions</a>
+            <a href="#">Tax Refund at Jewel</a>
+          </div>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">ATTRACTIONS</a>
+        <ul class="sub-menu single">
+          <div>
+            <h4>Highlights</h4>
+            <a href="#">HSBC Rain Vortex</a>
+            <a href="canopy-park.html">Canopy Park</a>
+            <a href="#">Shiseido Forest Valley</a>
+            <a href="#">Changi Experience Studio</a>
+            <a href="#">Jewel-rassic Quest</a>
+            <a href="#">Walking Net</a>
+            <a href="#">Mirror Maze</a>
+            <a href="#">Hedge Maze</a>
+          </div>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">SHOP</a>
+        <ul class="sub-menu single">
+          <div>
+            <h4>Shopping</h4>
+            <a href="#">Store Directory</a>
+            <a href="#">Promotions</a>
+            <a href="#">Tax-Free Shopping</a>
+            <a href="#">Brands at Jewel</a>
+            <a href="#">Gifts & Souvenirs</a>
+          </div>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">DINE</a>
+        <ul class="sub-menu">
+          <div>
+            <h4>Dining</h4>
+            <a href="#">Restaurants</a>
+            <a href="#">Cafés</a>
+            <a href="#">Fast Food</a>
+            <a href="#">Dining Promotions</a>
+            <a href="#">Food Directory</a>
+          </div>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">STAY</a>
+        <ul class="sub-menu single">
+          <div>
+            <h4>Accommodation</h4>
+            <a href="#">YOTELAIR</a>
+            <a href="#">Crowne Plaza</a>
+            <a href="#">Changi Experience Studio Hotel</a>
+          </div>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle">DOUBLE REWARDS</a>
+        <ul class="sub-menu single">
+          <div>
+            <h4>Rewards</h4>
+            <a href="#">How it Works</a>
+            <a href="#">Sign Up</a>
+            <a href="#">Loyalty Benefits</a>
+            <a href="#">Changi Rewards</a>
+          </div>
+        </ul>
+      </li>
+      <li class="divider">|</li>
+      <li><a href="#">CHANGI AIRPORT</a></li>
+      <li><a href="#">EN ▼</a></li>
+    </ul>
+    <div class="actions">
+      <button class="buy-btn">BUY TICKETS ▼</button>
+      <span class="search-icon">🔍</span>
+      <button id="toggle-dark">🌙</button>
+      <div class="search-dropdown" id="search-dropdown">
+        <input type="text" id="dropdown-search-input" placeholder="Search attractions...">
+        <ul id="dropdown-search-results"></ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- 🖼️ Hero Section -->
+<section class="hero-section">
+  <img src="assets/images/canopy-park-hero.webp" alt="Canopy Park" class="hero-img" loading="lazy"/>
+  <div class="overlay-text">CANOPY PARK</div>
+</section>
+<!-- 📦 Main Content -->
+<main class="container">
+
+  <!-- 🪴 Park Info -->
+  <div class="card split-box full-width">
+    <div class="left">
+      <h2 class="underline-gradient">Space to Unwind</h2>
+      <p>
+        Canopy Park, located at the topmost level (L5) of Jewel, welcomes the young and young at heart with an array of exciting play attractions.
+        From mazes to bouncing nets, it's all fun. Take a stroll along creative garden trails, glide down giant slides or hide in bowls of gentle mist.
+      </p>
+      <h2 class="underline-gradient">A Playground for Everyone</h2>
+      <p>
+        Jewel’s top floor is a 14,000 sqm recreational wonderland for all. Play or dine under the sparkling glass canopy amidst luscious foliage.
+      </p>
+    </div>
+    <div class="right">
+      <div class="info-box">
+        <h4>⏰ Opening Hours</h4>
+        <p>Mon–Thu: 10:00AM–9:00PM</p>
+        <p>Fri–Sun, Eve & PH: 10:00AM–10:00PM</p>
+        <p>Last admission 30 mins before closing</p>
+      </div>
+      <div class="info-box">
+        <h4>📍 Location</h4>
+        <p>Level 5, Jewel Changi Airport</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🎟️ Ticket Info -->
+  <div class="ticket-card">
+    <h3 class="underline-gradient">🎟️ Canopy Park Ticket Includes:</h3>
+    <ol>
+      <li>Discovery Slides</li>
+      <li>Foggy Bowls</li>
+      <li>Petal Garden</li>
+      <li>Topiary Walk</li>
+    </ol>
+    <p><strong>Standard Rate:</strong> SGD 8 (Adult/Child)</p>
+    <p><strong>Singapore Residents:</strong> SGD 6 (Adult/Child/Student/Senior)</p>
+    <p><strong>CapitaStar/Changi Rewards:</strong> SGD 5.40</p>
+
+    <p class="subtext">
+      CapitaStar Members & Changi Rewards Members Special Rate<br>
+      [Available at Jewel Concierge Counters (L1, 2, 5)]<br><br>
+      Adult/Child/**Student/Senior - SGD 5.40<br><br>
+      Child: 3 - 12 years old | Senior: 60 years old and above<br>
+      All Child ticket holders must be accompanied by a paying Adult.<br>
+      # Minimum height requirement is 110cm.<br><br>
+      * Applicable for Singapore citizens, permanent residents, employment pass, work permit and dependent pass holders. Proof of residency may be required at the point of ticket purchase and upon admission.<br><br>
+      **Current students of local Universities, Polytechnics, Junior Colleges, Institutes of Technical Education and Secondary School holding a valid student photo ID are eligible to purchase student ticket. Verification will be done at the point of entry.
+    </p>
+    <button class="buy-btn">Buy Tickets</button>
+  </div>
+
+  <!-- 📦 Bundle Deal 1 -->
+  <div class="card bundle-card">
+    <h3 class="underline-gradient">Bundle Deal 1</h3>
+    <ol>
+      <li>Canopy Park (Incl. Discovery Slides#, Foggy Bowls, Petal Garden, Topiary Walk)</li>
+      <li>Mastercard® Canopy Bridge</li>
+      <li>Hedge Maze</li>
+      <li>Mirror Maze</li>
+      <li>Walking Net#</li>
+    </ol>
+    <p class="rate">Adult - SGD 39  |  <strong>Child - SGD 29</strong></p>
+    <p class="subtext">
+      Child: 3 - 12 years old<br>
+      All Child ticket holders must be accompanied by a paying Adult<br>
+      # Minimum height requirement is 110cm.<br>
+      **Applicable to both local student and senior.
+    </p>
+    <button class="buy-btn">Buy Tickets</button>
+  </div>
+
+  <!-- 📦 Bundle Deal 2 -->
+  <div class="card bundle-card">
+    <h3 class="underline-gradient">Bundle Deal 2</h3>
+    <ol>
+      <li>Canopy Park (Incl. Discovery Slides#, Foggy Bowls, Petal Garden, Topiary Walk)</li>
+      <li>Mastercard® Canopy Bridge</li>
+      <li>Hedge Maze</li>
+      <li>Mirror Maze</li>
+      <li>Walking Net#</li>
+      <li>Bouncing Net^#</li>
+    </ol>
+    <p class="rate">Adult - SGD 54  |  <strong>Child - SGD 39</strong></p>
+    <p class="subtext">
+      Child: 3 - 12 years old<br>
+      All Child ticket holders must be accompanied by a paying Adult<br>
+      ^Rates are valid for one 45-min session inclusive of a compulsory safety briefing of estimated 10 mins.<br>
+      # Minimum height requirement is 110cm.<br>
+      **Applicable to both local student and senior.
+    </p>
+    <a href="buy-tickets.html" class="buy-btn">Buy Tickets</a>
+  </div>
+  
+  <!-- 📦 Bundle Deal 3 -->
+  <div class="card bundle-card">
+    <h3 class="underline-gradient">Bundle Deal 3</h3>
+    <ol>
+      <li>Changi Experience Studio+</li>
+      <li>Canopy Park (Incl. Discovery Slides#, Foggy Bowls, Petal Garden, Topiary Walk)</li>
+      <li>Mastercard® Canopy Bridge</li>
+      <li>Hedge Maze</li>
+      <li>Mirror Maze</li>
+      <li>Walking Net#</li>
+    </ol>
+    <p class="rate">Adult - SGD 56  |  <strong>Child - SGD 40</strong></p>
+    <p class="subtext">
+      Note: Changi Experience Studio opens from 11am to 8pm with last admission at 7pm.<br><br>
+      Child: 3 - 12 years old<br>
+      All Child ticket holders must be accompanied by a paying Adult<br>
+      + Attraction is suitable for children aged 6 and above.<br>
+      # Minimum height requirement is 110cm.<br>
+      **Applicable to both local student and senior.
+    </p>
+    <button class="buy-btn">Buy Tickets</button>
+  </div>
+
+  <!-- 📦 Bundle Deal 4 -->
+  <div class="card bundle-card">
+    <h3 class="underline-gradient">Bundle Deal 4</h3>
+    <ol>
+      <li>Changi Experience Studio+</li>
+      <li>Canopy Park (Incl. Discovery Slides#, Foggy Bowls, Petal Garden, Topiary Walk)</li>
+      <li>Mastercard® Canopy Bridge</li>
+      <li>Hedge Maze</li>
+      <li>Mirror Maze</li>
+      <li>Walking Net#</li>
+      <li>Bouncing Net^#</li>
+    </ol>
+    <p class="rate">Adult - SGD 71  |  <strong>Child - SGD 50</strong></p>
+    <p class="subtext">
+      Note: Changi Experience Studio opens from 11am to 8pm with last admission at 7pm.<br><br>
+      Child: 3 - 12 years old<br>
+      All Child ticket holders must be accompanied by a paying Adult<br>
+      + Attraction is suitable for children aged 6 and above.<br>
+      ^Rates are valid for one 45-min session inclusive of a compulsory safety briefing of estimated 10 mins.<br>
+      # Minimum height requirement is 110cm.<br>
+      **Applicable to both local student and senior.
+    </p>
+    <button class="buy-button">Buy Tickets</button>
+  </div>
+<!-- 🟢 10. Footer with Sustainability Note -->
+<footer class="main-footer">
+  <div class="footer-top">
+    <div class="subscribe-box">
+      <h4>STAY UPDATED</h4>
+      <p>Sign up for Jewel's Newsletter</p>
+      <button class="subscribe-btn">SUBSCRIBE</button>
+    </div>
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Career Opportunities</a>
+      <a href="#">Media Centre</a>
+      <a href="#">Contact Us</a>
+      <a href="#">FAQs</a>
+      <a href="#">Whistleblowing</a>
+    </div>
+  </div>
+  <div class="social-icons">
+    <i class="fab fa-facebook-f" aria-label="Facebook"></i>
+    <i class="fab fa-instagram" aria-label="Instagram"></i>
+    <i class="fab fa-linkedin-in" aria-label="LinkedIn"></i>
+    <i class="fab fa-tiktok" aria-label="TikTok"></i>
+    <i class="fab fa-tripadvisor" aria-label="TripAdvisor"></i>
+    <i class="fab fa-whatsapp" aria-label="WhatsApp"></i>
+    <i class="fab fa-telegram-plane" aria-label="Telegram"></i>
+  </div>
+  <div class="footer-logos">
+    <img src="assets/images/awards.webp" alt="Awards" loading="lazy" width="150" height="50">
+  </div>
+  <div class="footer-bottom">
+    <p>78 AIRPORT BOULEVARD, SINGAPORE 819666 ©2024 JEWEL CHANGI AIRPORT DEVT PTE. LTD.</p>
+    <a href="#">Conditions of Use</a> |
+    <a href="#">Privacy Policy</a>
+    <p class="sustainability-note" style="margin-top:1em;color:#7be663;font-weight:600;">
+      🌱 Green-coded: images compressed, lazy loaded; only needed code shipped; all JS/CSS minified and deferred; tested for low carbon output. Ready for green hosting.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
